@@ -9,10 +9,11 @@ app.use("/api/v1", Router);
 
 const fs = require("fs");
 const { registerFont, createCanvas, loadImage } = require("canvas");
-registerFont("Montserrat Regular 400.ttf", { family: "Monserrat-regular" });
-registerFont("Montserrat SemiBold 600.ttf", { family: "Monserrat-Semibold" });
-registerFont("Montserrat Bold 700.ttf", { family: "Monserrat-bold" });
-registerFont("Montserrat Medium 500.ttf", { family: "Monserrat-medium" });
+// registerFont("Montserrat Regular 400.ttf", { family: "Monserrat-regular" });
+// registerFont("Montserrat SemiBold 600.ttf", { family: "Monserrat-Semibold" });
+// registerFont("Montserrat Bold 700.ttf", { family: "Monserrat-bold" });
+// registerFont("Montserrat Medium 500.ttf", { family: "Monserrat-medium" });
+
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
   var words = text.split(" ");
   var line = "";

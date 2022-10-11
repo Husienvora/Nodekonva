@@ -5,7 +5,7 @@ const fs = require("fs");
 const { request } = require("http");
 const { registerFont, createCanvas, loadImage } = require("canvas");
 
-const fontMachine = async (fontFamily, Variant) => {
+const fontMachine = async (fontFamily) => {
   const data = await axios
     .get(
       "https://webfonts.googleapis.com/v1/webfonts?sort=STYLE&key=AIzaSyAAiOkCBmUBGJPQvjK1RmQVnhNMdgro2nU"
@@ -14,7 +14,7 @@ const fontMachine = async (fontFamily, Variant) => {
       return res.data.items;
     });
   dicturl = {};
-
+  let Variant = ["regular", "700"];
   for (i = 0; i <= data.length - 1; i++) {
     for (j = 0; j <= fontFamily.length - 1; j++) {
       if (data[i].family == fontFamily[j]) {
